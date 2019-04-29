@@ -18,19 +18,17 @@ public class controladorModificar implements ActionListener,KeyListener{
 		this.ventanaModificar = ventanaModificar;
 		this.ventanaModificar.botonModificar.addActionListener(this);
 		this.ventanaModificar.botonEliminar.addActionListener(this);
-		this.ventanaModificar.botonGuardarCambios.addActionListener(this);
+		this.ventanaModificar.botonBuscar.addActionListener(this);
 		this.ventanaModificar.camporut.addKeyListener(this);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource() == ventanaModificar.botonModificar) {
-			
+		if(e.getSource() == ventanaModificar.botonBuscar) {
 			if(BaseDeDatos.EstaRegistrado(ventanaModificar.camporut.getText())) {
 				ventanaModificar.camporut.setEditable(false);
 				ventanaModificar.campomail.setEditable(true);
 				ventanaModificar.camponombre.setEditable(true);
 				ventanaModificar.BoxNivel.setVisible(true);
-				ventanaModificar.botonGuardarCambios.setVisible(true);
 				
 			}else{
 				JOptionPane.showMessageDialog(null, "El Estudiante no se encuentra registrado", "Aviso", JOptionPane.WARNING_MESSAGE);
@@ -49,12 +47,15 @@ public class controladorModificar implements ActionListener,KeyListener{
 				JOptionPane.showMessageDialog(null, "El Estudiante no se encuentra registrado", "Aviso", JOptionPane.WARNING_MESSAGE);
 			}
 			
-		}else if(e.getSource() == ventanaModificar.botonGuardarCambios) {
-			
-			BaseDeDatos.ActualizarInfo(ventanaModificar.camporut.getText(),ventanaModificar.campomail.getText(),ventanaModificar.camponombre.getText(),ventanaModificar.BoxNivel.getSelectedItem().toString());
-			ventanaModificar.removeAll();
-			ventanaModificar.revalidate();
-			ventanaModificar.repaint();
+		}else if(e.getSource() == ventanaModificar.botonModificar) {
+			if(ventanaModificar.camponombre.getText().equals("") || ventanaModificar.campomail.getText().equals("")) {
+				JOptionPane.showMessageDialog(null, "Porfavor rellene los campos vacios", "Aviso", JOptionPane.WARNING_MESSAGE);
+			}else {
+				BaseDeDatos.ActualizarInfo(ventanaModificar.camporut.getText(),ventanaModificar.campomail.getText(),ventanaModificar.camponombre.getText(),ventanaModificar.BoxNivel.getSelectedItem().toString());
+				ventanaModificar.removeAll();
+				ventanaModificar.revalidate();
+				ventanaModificar.repaint();
+			}
 		}
 	}
 

@@ -13,7 +13,6 @@ import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 import javax.swing.SwingConstants;
 import java.awt.SystemColor;
-import java.awt.Toolkit;
 
 public class Estudiante extends JFrame {
 

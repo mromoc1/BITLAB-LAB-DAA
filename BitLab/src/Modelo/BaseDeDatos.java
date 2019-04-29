@@ -42,6 +42,9 @@ public class BaseDeDatos {
 				if(rs.next()) {
 					estaregistrado = true;
 				}
+				ps.close();
+				rs.close();
+				BDConnection.conectar().close();
 			}else{
 				JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
 			}

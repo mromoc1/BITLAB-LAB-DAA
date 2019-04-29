@@ -23,7 +23,7 @@ public class controladorContraseña implements ActionListener {
 	}
 	
 	public void iniciarVentana() {
-		ventanaContraseña.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\M\\eclipse-workspace\\V3\\Imagen\\businessman-with-shield.png"));
+		ventanaContraseña.setIconImage(Toolkit.getDefaultToolkit().getImage("Imagen\\businessman-with-shield.png"));
 		ventanaContraseña.setTitle("");
 		ventanaContraseña.setSize(400, 150);
 		ventanaContraseña.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

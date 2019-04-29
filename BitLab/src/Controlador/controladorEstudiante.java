@@ -30,7 +30,7 @@ public class controladorEstudiante implements ActionListener ,MouseListener{
 	
 	public void iniciarVentana() {
 		
-		ventanaestudiante.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\M\\eclipse-workspace\\V3\\Imagen\\clipboard (4).png"));
+		ventanaestudiante.setIconImage(Toolkit.getDefaultToolkit().getImage("Imagen\\clipboard (4).png"));
 		ventanaestudiante.setTitle("Bitacora de Ingreso a Laboratorio");
 		ventanaestudiante.setSize(720, 330);
 		ventanaestudiante.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

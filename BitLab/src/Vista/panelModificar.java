@@ -9,17 +9,18 @@ import javax.swing.JButton;
 import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
+import javax.swing.SwingConstants;
 
 public class panelModificar extends JPanel {
 	
 	private Font f = new Font("Century Gothic", Font.PLAIN, 16);
-	public JButton botonModificar, botonEliminar, botonGuardarCambios;
+	public JButton botonBuscar, botonEliminar, botonModificar;
 	public JTextField camporut,camponombre,campomail;
 	public JComboBox BoxNivel;
 
 	
 	public panelModificar() {
-		setBounds(220, 114, 654, 466);
+		setBounds(220, 114, 900, 460);
 		setLayout(null);
 		
 		
@@ -27,12 +28,18 @@ public class panelModificar extends JPanel {
 		add(panelNombres());
 		add(panelCampos());
 		
+		JLabel lblModificarDatosEstudiante = new JLabel("Modificar Datos Estudiante");
+		lblModificarDatosEstudiante.setHorizontalAlignment(SwingConstants.CENTER);
+		lblModificarDatosEstudiante.setFont(new Font("Century Gothic", Font.PLAIN, 35));
+		lblModificarDatosEstudiante.setBounds(117, 48, 654, 58);
+		add(lblModificarDatosEstudiante);
+		
 	}
 	
 	public JPanel panelNombres() {
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(111, 100, 80, 149);
+		panel.setBounds(229, 160, 80, 149);
 		panel.setLayout(new GridLayout(0, 1, 1, 1));
 		
 		JLabel label_1 = new JLabel(" Rut:");
@@ -56,7 +63,7 @@ public class panelModificar extends JPanel {
 	
 	public JPanel panelCampos() {
 		JPanel panel = new JPanel();
-		panel.setBounds(191, 100, 344, 149);
+		panel.setBounds(309, 160, 344, 149);
 		panel.setLayout(new GridLayout(0, 1, 10, 5));
 		
 		camporut = new JTextField();
@@ -86,10 +93,15 @@ public class panelModificar extends JPanel {
 	public JPanel panelBotones() {
 		JPanel panel = new JPanel();
 		
-		panel.setBounds(111, 263, 424, 53);
+		panel.setBounds(147, 349, 595, 49);
 		panel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 10));
 		
-		botonModificar = new JButton("Modificar");
+		botonBuscar = new JButton("Buscar");
+		botonBuscar.setFont(f);
+		botonBuscar.setBackground(Color.LIGHT_GRAY);
+		panel.add(botonBuscar);
+		
+		botonModificar = new JButton("Guardar");
 		botonModificar.setFont(f);
 		botonModificar.setBackground(Color.LIGHT_GRAY);
 		panel.add(botonModificar);
@@ -99,14 +111,8 @@ public class panelModificar extends JPanel {
 		botonEliminar.setBackground(Color.LIGHT_GRAY);
 		panel.add(botonEliminar);
 		
-		botonGuardarCambios = new JButton("Guardar");
-		botonGuardarCambios.setFont(f);
-		botonGuardarCambios.setBackground(Color.LIGHT_GRAY);
-		botonGuardarCambios.setVisible(false);
-		panel.add(botonGuardarCambios);
+		
 		
 		return panel;
 	}
-	
-	
 }

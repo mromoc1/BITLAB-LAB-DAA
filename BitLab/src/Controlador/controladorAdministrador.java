@@ -4,7 +4,6 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 import Modelo.BaseDeDatos;
@@ -31,7 +30,7 @@ public class controladorAdministrador implements ActionListener{
 	
 	public void iniciarVentana() {
 
-		ventanaAdministrador.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\M\\eclipse-workspace\\V3\\Imagen\\businessman-with-shield.png"));
+		ventanaAdministrador.setIconImage(Toolkit.getDefaultToolkit().getImage("Imagen\\businessman-with-shield.png"));
 		ventanaAdministrador.setTitle("Opciones de Administrador");
 		ventanaAdministrador.setSize(900, 630);
 		ventanaAdministrador.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -71,16 +70,19 @@ public class controladorAdministrador implements ActionListener{
 			ventanaAdministrador.panelcambio.removeAll();
 			ventanaAdministrador.panelcambio.revalidate();
 			ventanaAdministrador.panelcambio.repaint();
+			
 			BaseDeDatos.importarRegistro();
 		}else if(e.getSource() == ventanaAdministrador.botonExportarregistro) {
 			ventanaAdministrador.panelcambio.removeAll();
 			ventanaAdministrador.panelcambio.revalidate();
 			ventanaAdministrador.panelcambio.repaint();
+			
 			BaseDeDatos.exportarRegistro();
 		}else if(e.getSource() == ventanaAdministrador.botonExportarbitacora) {
 			ventanaAdministrador.panelcambio.removeAll();
 			ventanaAdministrador.panelcambio.revalidate();
 			ventanaAdministrador.panelcambio.repaint();
+			
 			BaseDeDatos.exportarBitacora();
 		}
 	}
