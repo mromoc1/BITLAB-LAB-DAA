@@ -27,7 +27,7 @@ public class controladorSalida implements ActionListener,KeyListener{
 			
 			BaseDeDatos.AnotarHoraSalida(ventanasalida.camporut.getText());
 			ventanasalida.camporut.setText("");
-			JOptionPane.showMessageDialog(null, "Hora de salida ingresada", "Aviso", JOptionPane.INFORMATION_MESSAGE);
+			
 			
 		}
 	}

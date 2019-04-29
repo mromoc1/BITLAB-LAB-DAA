@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 import javax.swing.SwingConstants;
 import java.awt.SystemColor;
+import javax.swing.ImageIcon;
 
 public class Estudiante extends JFrame {
 
@@ -20,6 +21,7 @@ public class Estudiante extends JFrame {
 	public JPanel panelcambio;
 	public JButton botonIngresar, botonSalida, botonAdmin;
 	public JLabel botonInformacion;
+	public JLabel database;
 	
 	public Estudiante() {
 		
@@ -42,6 +44,18 @@ public class Estudiante extends JFrame {
 		botonInformacion.setFont(new Font("Segoe UI Black", Font.PLAIN, 20));
 		botonInformacion.setBounds(653, 11, 30, 30);
 		getContentPane().add(botonInformacion);
+		
+		database = new JLabel("");
+		database.setIcon(new ImageIcon("Imagen\\database (1).png"));
+		
+		
+		database.setHorizontalTextPosition(SwingConstants.CENTER);
+		database.setHorizontalAlignment(SwingConstants.CENTER);
+		database.setFont(new Font("Segoe UI Black", Font.PLAIN, 20));
+		database.setBorder(new LineBorder(new Color(0, 0, 0)));
+		database.setBackground(SystemColor.menu);
+		database.setBounds(10, 11, 30, 30);
+		getContentPane().add(database);
 		
 		
 	}

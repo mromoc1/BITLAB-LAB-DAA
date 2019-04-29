@@ -42,11 +42,9 @@ public class BaseDeDatos {
 				if(rs.next()) {
 					estaregistrado = true;
 				}
-				ps.close();
-				rs.close();
-				BDConnection.conectar().close();
 			}else{
 				JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+				return null;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -73,6 +71,7 @@ public class BaseDeDatos {
 				
 			}else{
 				JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+				return;
 			}
 		} catch (SQLException ex) {
 			ex.printStackTrace();
@@ -100,6 +99,7 @@ public class BaseDeDatos {
 				
 			}else{
 				JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+				return;
 			}
 		} catch (SQLException ex) {
 			ex.printStackTrace();
@@ -120,11 +120,12 @@ public class BaseDeDatos {
 				ps.setInt(2, Integer.parseInt(rut));
 				ps.setString(3, "0");
 				if(ps.executeUpdate() > 0) {
-					
+					JOptionPane.showMessageDialog(null, "Hora de salida ingresada", "Aviso", JOptionPane.INFORMATION_MESSAGE);
 				}
 				
 			}else{
 				JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+				return;
 			}
 		} catch (SQLException ex) {
 			ex.printStackTrace();
@@ -145,7 +146,7 @@ public class BaseDeDatos {
 				
 				if(ps.executeUpdate() > 0) {
 					JOptionPane.showMessageDialog(null, "Informacion actualizada correctamente","Aviso",JOptionPane.INFORMATION_MESSAGE);
-					
+					return;
 				}
 				
 			}else{
@@ -170,6 +171,7 @@ public class BaseDeDatos {
 				
 			}else{
 				JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+				return;
 			}
 		} catch (SQLException ex) {
 			ex.printStackTrace();
@@ -197,6 +199,7 @@ public class BaseDeDatos {
 				
 			}else{
 				JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+				return null;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -227,6 +230,7 @@ public class BaseDeDatos {
 				
 			}else{
 				JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+				return null;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -254,6 +258,7 @@ public class BaseDeDatos {
 				
 			}else{
 				JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+				return null;
 			}
 		} catch (SQLException e1) {
 			e1.printStackTrace();
@@ -304,6 +309,7 @@ public class BaseDeDatos {
 					
 				}else{
 					JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+					return;
 				}
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
@@ -370,6 +376,7 @@ public class BaseDeDatos {
 						JOptionPane.showMessageDialog(null, "Se ha exportado con exito","Aviso",JOptionPane.INFORMATION_MESSAGE);
 					}else{
 						JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+						return;
 					}
 				}catch(Exception e) {}
 				
@@ -432,6 +439,7 @@ public class BaseDeDatos {
 						JOptionPane.showMessageDialog(null, "Se ha exportado con exito","Aviso",JOptionPane.INFORMATION_MESSAGE);
 					}else {
 						JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+						return;
 					}
 					
 					

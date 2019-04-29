@@ -2,13 +2,18 @@ package Modelo;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
-public class BDConnection {
-
+public class BDConnection {	
 	
-	private static final String Controlador = "org.postgresql.Driver";
-	private static final String Url = "jdbc:postgresql://localhost:5432/Laboratorio";
-	private static final String User = "postgres";
-	private static final String Pass = "contrase";
+	private static String Controlador = "org.postgresql.Driver";
+	private static String Url;
+	private static String User;
+	private static String Pass;
+	
+	public static void Inicializarvariables(String contraseña, String nombreusuario, String puerto) {
+		Pass = contraseña;
+		User = nombreusuario;
+		Url = "jdbc:postgresql://localhost:"+puerto+"/Laboratorio";
+	}
 	
 	public static Connection conectar() {
 		Connection con = null;
@@ -18,7 +23,7 @@ public class BDConnection {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch(SQLException e) {
-			JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+			//JOptionPane.showMessageDialog(null, "Error en la conexion","Aviso",JOptionPane.ERROR_MESSAGE);
 		}
 		return con;
 	}

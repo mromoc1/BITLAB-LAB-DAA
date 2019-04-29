@@ -9,6 +9,8 @@ import java.awt.event.MouseListener;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
+import Modelo.BDConnection;
+import Modelo.BaseDeDatos;
 import Vista.Contraseña;
 import Vista.Estudiante;
 import Vista.panelIngreso;
@@ -25,6 +27,7 @@ public class controladorEstudiante implements ActionListener ,MouseListener{
 		this.ventanaestudiante.botonIngresar.addActionListener(this);
 		this.ventanaestudiante.botonSalida.addActionListener(this);
 		this.ventanaestudiante.botonInformacion.addMouseListener(this);
+		this.ventanaestudiante.database.addMouseListener(this);
 		
 	}
 	
@@ -81,6 +84,27 @@ public class controladorEstudiante implements ActionListener ,MouseListener{
 					+ "\nCreado por Marcelo Romo"
 					+ "\nUniversidad de La Serena, Abril 2019"
 					+ "\nVersion 2.3","Informacion",JOptionPane.INFORMATION_MESSAGE);
+			
+		}else if(e.getSource() == ventanaestudiante.database) {
+			if(BDConnection.conectar() != null) {
+				String pass = JOptionPane.showInputDialog(null, "Ingrese Contraseña Administrador", "Aviso", JOptionPane.WARNING_MESSAGE);
+				
+				if(BaseDeDatos.coincide(pass)) {
+					String puerto = JOptionPane.showInputDialog(null, "Ingrese el puerto", "Puerto", JOptionPane.QUESTION_MESSAGE);
+					String nombreusuario = JOptionPane.showInputDialog(null, "Ingrese el nombre de usuario", "Usuario", JOptionPane.QUESTION_MESSAGE);
+					String contraseña = JOptionPane.showInputDialog(null, "Ingrese la contraseña", "Contraseña", JOptionPane.QUESTION_MESSAGE);
+					
+					BDConnection.Inicializarvariables(contraseña, nombreusuario, puerto);
+				}else {
+					JOptionPane.showMessageDialog(null, "Clave Administrador Incorrecta", "Aviso", JOptionPane.WARNING_MESSAGE);
+				}
+			}else {
+				String puerto = JOptionPane.showInputDialog(null, "Ingrese el puerto", "Puerto", JOptionPane.QUESTION_MESSAGE);
+				String nombreusuario = JOptionPane.showInputDialog(null, "Ingrese el nombre de usuario", "Usuario", JOptionPane.QUESTION_MESSAGE);
+				String contraseña = JOptionPane.showInputDialog(null, "Ingrese la contraseña", "Contraseña", JOptionPane.QUESTION_MESSAGE);
+				
+				BDConnection.Inicializarvariables(contraseña, nombreusuario, puerto);
+			}
 			
 		}
 	}
