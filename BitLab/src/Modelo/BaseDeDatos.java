@@ -43,7 +43,7 @@ public class BaseDeDatos {
 					estaregistrado = true;
 				}
 			}else{
-				JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Error en la conexión","Aviso",JOptionPane.ERROR_MESSAGE);
 				return null;
 			}
 		} catch (SQLException e) {
@@ -70,7 +70,7 @@ public class BaseDeDatos {
 				}
 				
 			}else{
-				JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Error en la conexión","Aviso",JOptionPane.ERROR_MESSAGE);
 				return;
 			}
 		} catch (SQLException ex) {
@@ -98,7 +98,7 @@ public class BaseDeDatos {
 				}
 				
 			}else{
-				JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Error en la conexión","Aviso",JOptionPane.ERROR_MESSAGE);
 				return;
 			}
 		} catch (SQLException ex) {
@@ -124,7 +124,7 @@ public class BaseDeDatos {
 				}
 				
 			}else{
-				JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Error en la conexión","Aviso",JOptionPane.ERROR_MESSAGE);
 				return;
 			}
 		} catch (SQLException ex) {
@@ -150,7 +150,7 @@ public class BaseDeDatos {
 				}
 				
 			}else{
-				JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Error en la conexión","Aviso",JOptionPane.ERROR_MESSAGE);
 			}
 		} catch (SQLException ex) {
 			ex.printStackTrace();
@@ -170,7 +170,7 @@ public class BaseDeDatos {
 				}
 				
 			}else{
-				JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Error en la conexión","Aviso",JOptionPane.ERROR_MESSAGE);
 				return;
 			}
 		} catch (SQLException ex) {
@@ -198,7 +198,7 @@ public class BaseDeDatos {
 				}
 				
 			}else{
-				JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Error en la conexión","Aviso",JOptionPane.ERROR_MESSAGE);
 				return null;
 			}
 		} catch (SQLException e) {
@@ -229,7 +229,7 @@ public class BaseDeDatos {
 				}
 				
 			}else{
-				JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Error en la conexión","Aviso",JOptionPane.ERROR_MESSAGE);
 				return null;
 			}
 		} catch (SQLException e) {
@@ -257,7 +257,7 @@ public class BaseDeDatos {
 				}
 				
 			}else{
-				JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Error en la conexión","Aviso",JOptionPane.ERROR_MESSAGE);
 				return null;
 			}
 		} catch (SQLException e1) {
@@ -308,7 +308,7 @@ public class BaseDeDatos {
 					JOptionPane.showMessageDialog(null, "Se ha importado con exito","Aviso",JOptionPane.INFORMATION_MESSAGE);
 					
 				}else{
-					JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "Error en la conexión","Aviso",JOptionPane.ERROR_MESSAGE);
 					return;
 				}
 			} catch (FileNotFoundException e) {
@@ -375,7 +375,7 @@ public class BaseDeDatos {
 						}
 						JOptionPane.showMessageDialog(null, "Se ha exportado con exito","Aviso",JOptionPane.INFORMATION_MESSAGE);
 					}else{
-						JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(null, "Error en la conexión","Aviso",JOptionPane.ERROR_MESSAGE);
 						return;
 					}
 				}catch(Exception e) {}
@@ -438,7 +438,7 @@ public class BaseDeDatos {
 						}
 						JOptionPane.showMessageDialog(null, "Se ha exportado con exito","Aviso",JOptionPane.INFORMATION_MESSAGE);
 					}else {
-						JOptionPane.showMessageDialog(null, "Error en la coneccion","Aviso",JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(null, "Error en la conexión","Aviso",JOptionPane.ERROR_MESSAGE);
 						return;
 					}
 					
