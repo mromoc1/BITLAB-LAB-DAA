@@ -1,11 +1,13 @@
 package Controlador;
 
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 import Modelo.BaseDeDatos;
@@ -23,8 +25,10 @@ public class controladorRegistro implements ActionListener,KeyListener{
 	}
 	
 	public void  IniciarVentana() {
+		ImageIcon icono = new ImageIcon(getClass().getResource("/Imagen/clipboard (4).png"));
+		Image imagen = icono.getImage();
 		
-		ventanaregistro.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\M\\eclipse-workspace\\V3\\Imagen\\clipboard (4).png"));
+		ventanaregistro.setIconImage(imagen);
 		ventanaregistro.setTitle("Registro");
 		ventanaregistro.setSize(600, 300);
 		ventanaregistro.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

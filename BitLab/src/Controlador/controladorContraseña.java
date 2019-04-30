@@ -1,9 +1,11 @@
 package Controlador;
 
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -23,7 +25,10 @@ public class controladorContraseña implements ActionListener {
 	}
 	
 	public void iniciarVentana() {
-		ventanaContraseña.setIconImage(Toolkit.getDefaultToolkit().getImage("Imagen\\businessman-with-shield.png"));
+		ImageIcon icono = new ImageIcon(getClass().getResource("/Imagen/businessman-with-shield.png"));
+		Image imagen = icono.getImage();
+		
+		ventanaContraseña.setIconImage(imagen);
 		ventanaContraseña.setTitle("");
 		ventanaContraseña.setSize(400, 150);
 		ventanaContraseña.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

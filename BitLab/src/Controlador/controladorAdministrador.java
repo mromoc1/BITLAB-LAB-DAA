@@ -1,9 +1,11 @@
 package Controlador;
 
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 import Modelo.BaseDeDatos;
@@ -29,8 +31,12 @@ public class controladorAdministrador implements ActionListener{
 	}
 	
 	public void iniciarVentana() {
-
-		ventanaAdministrador.setIconImage(Toolkit.getDefaultToolkit().getImage("Imagen\\businessman-with-shield.png"));
+		
+		
+		ImageIcon icono = new ImageIcon(getClass().getResource("/Imagen/businessman-with-shield.png"));
+		Image imagen = icono.getImage();
+		
+		ventanaAdministrador.setIconImage(imagen);
 		ventanaAdministrador.setTitle("Opciones de Administrador");
 		ventanaAdministrador.setSize(900, 630);
 		ventanaAdministrador.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

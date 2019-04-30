@@ -1,11 +1,13 @@
 package Controlador;
 
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -33,7 +35,10 @@ public class controladorEstudiante implements ActionListener ,MouseListener{
 	
 	public void iniciarVentana() {
 		
-		ventanaestudiante.setIconImage(Toolkit.getDefaultToolkit().getImage("Imagen\\clipboard (4).png"));
+		ImageIcon icono = new ImageIcon(getClass().getResource("/Imagen/clipboard (4).png"));
+		Image imagen = icono.getImage();
+		
+		ventanaestudiante.setIconImage(imagen);
 		ventanaestudiante.setTitle("Bitacora de Ingreso a Laboratorio");
 		ventanaestudiante.setSize(720, 330);
 		ventanaestudiante.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -83,7 +88,7 @@ public class controladorEstudiante implements ActionListener ,MouseListener{
 					+ "Proyecto para la clase Diseño y Analisis de Algoritmos"
 					+ "\nCreado por Marcelo Romo"
 					+ "\nUniversidad de La Serena, Abril 2019"
-					+ "\nVersion 2.3","Informacion",JOptionPane.INFORMATION_MESSAGE);
+					+ "\nVersion 2.6","Informacion",JOptionPane.INFORMATION_MESSAGE);
 			
 		}else if(e.getSource() == ventanaestudiante.database) {
 			if(BDConnection.conectar() != null) {

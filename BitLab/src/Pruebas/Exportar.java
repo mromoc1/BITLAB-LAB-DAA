@@ -13,7 +13,7 @@ class Exportar {
 	@Test
 	public void testExportar() {
 		/**
-		 * Cuenta los archivos de C:\\Users\\M\\eclipse-workspace\\V3\\src\\Pruebas
+		 * Cuenta los archivos de src\\Pruebas
 		 * y los guarda
 		 */
 		File dir = new File("src\\Pruebas");

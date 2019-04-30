@@ -13,6 +13,8 @@ import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 import javax.swing.SwingConstants;
 import java.awt.SystemColor;
+import java.net.URL;
+
 import javax.swing.ImageIcon;
 
 public class Estudiante extends JFrame {
@@ -45,9 +47,10 @@ public class Estudiante extends JFrame {
 		botonInformacion.setBounds(653, 11, 30, 30);
 		getContentPane().add(botonInformacion);
 		
-		database = new JLabel("");
-		database.setIcon(new ImageIcon("Imagen\\database (1).png"));
 		
+		
+		database = new JLabel("");
+		database.setIcon(new ImageIcon(getClass().getResource("/Imagen/database (1).png")));
 		
 		database.setHorizontalTextPosition(SwingConstants.CENTER);
 		database.setHorizontalAlignment(SwingConstants.CENTER);
