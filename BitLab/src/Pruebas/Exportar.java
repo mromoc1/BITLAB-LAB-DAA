@@ -16,12 +16,12 @@ class Exportar {
 		 * Cuenta los archivos de C:\\Users\\M\\eclipse-workspace\\V3\\src\\Pruebas
 		 * y los guarda
 		 */
-		File dir = new File("C:\\Users\\M\\eclipse-workspace\\V3\\src\\Pruebas");
+		File dir = new File("src\\Pruebas");
 		String[] ficheros = dir.list();
 		int cantidad = ficheros.length;
 		
 		BaseDeDatos.exportarRegistro();
-		File dir2 = new File("C:\\Users\\M\\eclipse-workspace\\V3\\src\\Pruebas");
+		File dir2 = new File("src\\Pruebas");
 		ficheros = dir2.list();
 		int esperado = ficheros.length;
 		
